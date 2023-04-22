@@ -4,10 +4,10 @@ Python codes for generating datasets with topology optimization results for a ca
 Further details are presented in the **documentation.pdf** file.
 
 ### General Description
-This work is part of the PhD thesis entitled *Redes Neurais Artificiais para Concepção Topológica de Metamateriais* (Artificial Neural Networks for Topological Design of Metamaterials). The author Daniel Candeloro Cunha and his supervisor Professor Renato Pavanello are researchers at the Laboratory of
-Topology Optimization and Multiphysics Analysis, at the University of Campinas (Brazil).
+This work is part of the PhD thesis entitled *Análise de Sensibilidade de Variação Finita assistida por Redes Neurais Artificiais para Concepção de Metamateriais* (Finite Variation Sensitivity Analysis assisted by Artificial Neural Networks for Designing Metamaterials). The author Daniel Candeloro Cunha and his supervisor Professor Renato Pavanello are researchers at the Laboratory of Topology Optimization and Multiphysics Analysis, at the University of Campinas (Brazil).
 
 The objective of the provided programs is to generate datasets that will be used to train artificial neural networks. The purpose of such networks is to improve the performance of standard topology optimization programs, by reducing computational costs, making the procedures more stable, or more accurate.
+
 The topology optimization of a cantilever beam is considered. Four free parameters are used to define the boundary conditions of the problem. For the specified mesh, there are 296208 unique sets of parameters, the optimization was performed for all the 148240 non-redundant cases. The complementary cases can be obtained through simple operations described in the documentation (but not implemented in this version).
 
 Each case is optimized twice, using different optimization methods: SILP-BESO and SIMP-MMA. Therefore, 296480 = 2 × 148240 optimizations are performed to generate the two datasets (one for each optimization method). For each iteration of each case, all results are stored: topology vectors; sensitivity vectors; displacements vectors; objective function values; volume fraction values; gray level values. Also, metadata is stored with relevant information, for example, the corresponding input parameters of each result. Together, both datasets occupy around **980 GB** of disk.
